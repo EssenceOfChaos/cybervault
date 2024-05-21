@@ -17,7 +17,8 @@ defmodule Cybervault.Application do
       # Start Finch
       {Finch, name: Cybervault.Finch},
       # Start the Endpoint (http/https)
-      CybervaultWeb.Endpoint
+      CybervaultWeb.Endpoint,
+      Cybervault.Healthcheck.Supervisor
       # Start a worker by calling: Cybervault.Worker.start_link(arg)
       # {Cybervault.Worker, arg}
     ]

@@ -1,5 +1,9 @@
 import Config
 
+require Logger
+
+DotenvParser.load_file(".env")
+Logger.debug("Parsing Dotenv file, secret value is #{System.get_env("SECRET_VALUE")}")
 # config/runtime.exs is executed for all environments, including
 # during releases. It is executed after compilation and before the
 # system starts, so it is typically used to load production configuration
